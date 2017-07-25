@@ -1,2 +1,2 @@
 FROM nginx
-COPY . /home/cloud-user/projects/carousel
+COPY static-html-directory /home/cloud-user/projects/carousel
