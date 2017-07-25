@@ -13,9 +13,11 @@
 
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/g/jquery.slick@1.6.0(slick-theme.css+slick.css)" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.4/css/bulma.css">
+    <link href="https://fonts.googleapis.com/css?family=Cairo" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+    <link rel="stylesheet" href="css/main.css">
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
 
 </head>
@@ -26,48 +28,105 @@
         <![endif]-->
 
     <!-- The Good Stuff -->
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="http://bulma.io">
+                <span class="brand-text">EUCLID</span>
+             </a>
+        </div>
+        <div class="navbar-end">
+            <div class="navbar-item">
+                <div class="field is-grouped">
+                    <p class="control">
+                        <a class="button is-info is-outlined" href="http://10.146.99.29:3000/" target="_blank">
+                            <span class="icon">
+                                <img src="http://www.metabase.com/images/logo.svg">
+                            </span>
+                            <span>Metabase</span>
+                        </a>
+                        <a class="button is-danger" href="https://radialtalk.slack.com/" target="_blank">
+                            <span class="icon">
+                                <i class="fa fa-slack"></i>
+                             </span>
+                            <span>Slack</span>
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </nav>
+
     <section class="hero is-primary">
         <div class="hero-body">
             <div class="container">
                 <h1 class="title">
-                    Euclid
+                    Click me.
                 </h1>
                 <h2 class="subtitle">
-                    Large Format Display
+                    I'm ready for the big screen.
                 </h2>
             </div>
         </div>
     </section>
+
+
     <div class="section">
         <div class="container">
             <div class="tile is-ancestor">
-                <div class="tile is-vertical">
-                    <div class="tile is-parent">
-                        <div class="tile box is-child">
-                            <iframe src="{{iframeUrl}}" frameborder="0" width="800" height="600" allowtransparency></iframe>
+                <div class="tile is-vertical is-12">
+                    <div class="tile is-parent slick-parent">
+                        <div class="tile box is-child slider-for has-text-centered">
+                            <div>
+                                <iframe src="http://10.146.99.29:3000/public/question/39af1d27-be2c-42e9-a055-63683161bf0a" frameborder="0" width="1200"
+                                    height="550" allowtransparency></iframe>
+                            </div>
+                            <div>
+                                <iframe src="http://10.146.99.29:3000/public/question/bed4e64a-6a7c-41f3-b7bd-ff2331faa63a" frameborder="0" width="1200"
+                                    height="550" allowtransparency></iframe>
+                            </div>
+                            <div>
+                                <iframe src="http://10.146.99.29:3000/public/dashboard/cdf47270-c7b4-433b-9fa3-158d61911fb3" frameborder="0" width="1200"
+                                    height="600" allowtransparency></iframe>
+                            </div>
+                            <div>
+                                <iframe src="http://10.146.99.29:3000/public/question/f487cd3d-91f4-49bc-9eda-7044151939f5" frameborder="0" width="800" height="600"
+                                    allowtransparency></iframe>
+                            </div>
                         </div>
                     </div>
                     <div class="tile">
                         <div class="tile is-parent is-8">
-                            <div class="tile box is-child">
+                            <div class="tile box is-child is-12">
+                                <div class="slider-nav">
+                                    <div class="has-text-centered">
+                                        <span class="tag is-info is-medium">On Premise</span>
+                                    </div>
+                                    <div class="has-text-centered">
+                                        <span class="tag is-info is-medium">At Risk</span>
+                                    </div>
+                                    <div class="has-text-centered">
+                                        <span class="tag is-info is-medium">Richwood</span>
+                                    </div>
+                                    <div class="has-text-centered">
+                                        <span class="tag is-info is-medium">Heat Map</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="tile is-parent">
                             <div class="tile box is-child has-text-centered">
-                                <div class="block">
-                                    <a class="button">
+                                <a class="button play is-primary">
                                     <span class="icon">
                                         <i class="fa fa-play"></i>
                                     </span>
                                     <span>Play</span>
                                 </a>
-                                    <a class="button">
+                                <a class="button pause">
                                     <span class="icon">
                                         <i class="fa fa-pause"></i>
                                     </span>
                                     <span>Pause</span>
                                 </a>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -79,7 +138,7 @@
     <!-- The Script Stuff -->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
         crossorigin="anonymous"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
 

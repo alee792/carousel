@@ -95,11 +95,15 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+.slick-parent {
+    display: -webkit-box !important;
+}
 
-
-
-
-
+.brand-text {
+    font-family: 'Cairo', sans-serif;
+    font-weight: bold;
+    font-size: 2.4rem;
+}
 
 
 

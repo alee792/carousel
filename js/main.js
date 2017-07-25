@@ -1,14 +1,48 @@
-// you will need to install via 'npm install jsonwebtoken' or in your package.json
+function launchIntoFullscreen(element) {
+  if(element.requestFullscreen) {
+    element.requestFullscreen();
+  } else if(element.mozRequestFullScreen) {
+    element.mozRequestFullScreen();
+  } else if(element.webkitRequestFullscreen) {
+    element.webkitRequestFullscreen();
+  } else if(element.msRequestFullscreen) {
+    element.msRequestFullscreen();
+  }
+}
 
-var jwt = require("jsonwebtoken");
+$(document).ready(function () {
+    $('.slider-for').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true,
+        asNavFor: '.slider-nav',
+        autoplay: true,
+        autoplaySpeed: 15000
+    });
+    $('.slider-nav').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        asNavFor: '.slider-for',
+        dots: true,
+        centerMode: true,
+        focusOnSelect: true
+    });
+    $('.play').click(function () {
+        $('.slider-for').slick('slickPlay');
+        $(this).addClass('is-primary');
+        $('.pause').removeClass('is-warning');
+    });
 
-var METABASE_SITE_URL = "http://10.146.99.29:3000";
-var METABASE_SECRET_KEY = "5c476d018a50d11ed3c7f59e5f26191ea9d6750a81bbc5f43715efec011b152f";
+    $('.pause').click(function () {
+        $('.slider-for').slick('slickPause');
+        $(this).addClass('is-warning');
+        $('.play').removeClass('is-primary');
+    });
 
-var payload = {
-  resource: { question: 185 },
-  params: {}
-};
-var token = jwt.sign(payload, METABASE_SECRET_KEY);
-
-var iframeUrl = METABASE_SITE_URL + "/embed/question/" + token + "#bordered=true&titled=true";
+    $('.hero').click(function () {
+        launchIntoFullscreen(document.documentElement);
+        $("html, body").animate({ scrollTop: $(document).height() }, 3000);
+        return false;
+    });
+});
