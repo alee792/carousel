@@ -1,2 +1,2 @@
-FROM nginx:alpine
+FROM nginx
 COPY . /home/cloud-user/projects/carousel
