@@ -5,5 +5,6 @@ This simple website will cycle through iFrames of content at regular intervals. 
 
 ### Todo: 
 + Generalize code
-+ Add/Remove buttons
++ Add/Remove iframe form
 + Additional button to hide/reveal bar
++ Remove unused boilerplate elements
