@@ -116,6 +116,8 @@ textarea {
 
 
 
+
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
@@ -196,8 +198,16 @@ textarea {
    Modify as content requires.
    ========================================================================== */
 /* Add media query to resize iframes to fullscreen/full div when zoomed in */
+body.is-fullscreen .dashboard{
+    width: 1920px;
+    height: 1080px;
+}
 @media only screen and (min-width: 35em) {
     /* Style adjustments for viewports that meet the condition */
+    .iframe-class {
+        width: 1300px;
+        height: 600px;
+    }
 }
 
 @media print,

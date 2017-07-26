@@ -46,6 +46,10 @@ $(document).ready(function () {
         $('.play').removeClass('is-primary');
     });
 
+    document.addEventListener('fullscreenchange', function () {
+        document.body.classList.toggle('is-fullscreen', document.fullscreenEnabled);
+    });
+
     $('.hero').click(function () {
         launchIntoFullscreen(document.documentElement);
         $("html, body").animate({ scrollTop: $(document).height() }, 2000);
