@@ -52,7 +52,7 @@ $(document).ready(function () {
 
     $('.hero').click(function () {
         launchIntoFullscreen(document.documentElement);
-        $("html, body").animate({ scrollTop: $(document).height() }, 2000);
+        $('html, body').animate({ scrollTop: $('.dashboard').offset().top }, 2000);
         return false;
     });
 });
