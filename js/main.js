@@ -12,10 +12,13 @@ function launchIntoFullscreen(element) {
 
 $(document).ready(function () {
 
+
+    // Set a refresh interval TODO: Make it refresh one minute past each quarter hour. 
     setInterval(function () {
         $('iframe').attr('src', function (i, val) { return val });
     }, 15 * 1000 * 3600);
 
+    // Slick settings
     $('.slider-for').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -34,6 +37,8 @@ $(document).ready(function () {
         centerMode: true,
         focusOnSelect: true
     });
+
+    // Controls
     $('.play').click(function () {
         $('.slider-for').slick('slickPlay');
         $(this).addClass('is-primary');
@@ -46,6 +51,7 @@ $(document).ready(function () {
         $('.play').removeClass('is-primary');
     });
 
+    // Fullscreen
     $('.hero').click(function () {
         document.body.classList.toggle('is-fullscreen', document.fullscreenEnabled);
         launchIntoFullscreen(document.documentElement);
